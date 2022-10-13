@@ -8,3 +8,10 @@
     background-size: 360px;
     background-position: right bottom;
 }
+
+.hc:hover{
+    background-color:#accdd4;
+}
+.hc{
+   background-color:#CAEBF2;
+}
