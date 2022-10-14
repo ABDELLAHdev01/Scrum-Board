@@ -41,7 +41,7 @@
 				</div>
 				
 				<div class="">
-					<button class="btn btn-success rounded-pill">  Add Task<i class="bi bi-plus-lg"></i></a>
+					<button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add Task<i class="bi bi-plus-lg"></i></a></button>
 				</div>
 			</div>
 			<div class="text-center text-lg-start">
@@ -307,9 +307,97 @@
 	<!-- END #app -->
 	
 	<!-- TASK MODAL -->
-	<div class="modal fade" id="modal-task">
+	<!-- <div class="modal fade" id="modal-task"> -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog jus">
+			  <div class="modal-content"  style="background-color: #CAEBF2;">
+				<div class="modal-header"   style="background-color: #6C757D;">
+				  <h1 class="modal-title fs-4 text-white offset-5 " id="exampleModalLabel">Add task</h1>
+				  <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<form>
+						<br>
+						<!-- title -->
+					<div>
+						<label class="form-label" for="title">Title</label>
+						<input type="text" class="form-control">
+					</div>
+
+
+						<!-- Type -->
+					<br>
+					<div>
+						<label class="form-label" for="type">Type</label>
+					</div>
+
+						
+						
+					<div class="m-2">
+						<input class="form-check-input " type="radio" value="feature" id="feature" name="type">
+						<label for="feature">Feature</label>
+					
+						<input class="form-check-input" type="radio" value="bug" id="bug" name="type">
+						<label for="bug">Bug</label>
+						
+					</div>
+					<br>
+
+						
+						<!-- prioritys -->
+						<div class="form-group">
+							<label for="Priorityselect">Priority</label>
+							<select class="form-select" id="Priorityselect">
+								<option selected disabled value="">Pleas Select</option>
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							</select>
+						  </div>
+						  <br>
+						  <!-- Status -->
+						  <div class="form-group">
+							<label for="Statusselect">Priority</label>
+							<select class="form-select" id="Statusselect">
+								<option selected disabled value="">Pleas Select</option>
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							</select>
+						  </div>  
+
+						  <br>
+						  <!-- date -->
+						  <label for="date">Date</label>
+						  <input type="date" class="form-control">
+						<br>
+						  <!-- textdescription -->
+
+						  <div class="form-group">
+							<label for="descriptionlb">Description</label>
+							<textarea class="form-control" id="descriptionlb" rows="3"></textarea>
+						  </div>
+						
+					  </form>
+
+
+
+			</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-success">Save</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
 		<!-- Modal content goes here -->
-	</div>
+	<!-- </div> -->
 	
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="assets/js/vendor.min.js"></script>

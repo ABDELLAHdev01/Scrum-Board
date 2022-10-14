@@ -9,9 +9,33 @@
     background-position: right bottom;
 }
 
-.hc:hover{
+.hc:active{
     background-color:#accdd4;
 }
 .hc{
    background-color:#CAEBF2;
+}
+
+.title{
+    width: 80%;
+    height: 25px;
+}
+
+.ttext{
+    color: grey;
+    justify-content: space-around;
+}
+
+
+.dspace{
+    height: 70px;
+    width: 79%;
+}
+
+
+.pspace{
+
+
+        width: 79%;
+        height: 25px;
 }
