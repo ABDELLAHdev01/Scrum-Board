@@ -20,7 +20,7 @@
 	<!-- ================== END core-css ================== -->
 </head>
 <body>
-
+	
 	<!-- BEGIN #app -->
 	<div id="app" class="app-without-sidebar">
 		<!-- BEGIN #content -->
@@ -40,25 +40,27 @@
 					<!-- END page-header -->
 				</div>
 				
-				<div class="">
-					<button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add Task<i class="bi bi-plus-lg"></i></a></button>
+				<div class="" >
+					<span id="deleteall"></span>
+					<button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="resteData()" >Add Task<i class="bi bi-plus-lg"></i></a></button>
 				</div>
+				
 			</div>
 			<div class="text-center text-lg-start">
-			<h1 class="page-header fw-bold ">
+			<h1 class="page-header fw-bold " id="Sb">
 				Scrum Board 
 			</h1>
 		</div>
-			<div class="row justify-content-around	">
+			<div class="row justify-content-around	" id="testing">
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class="mb-5" style="height: 100%;">
 						<div class="p-2 border bg-secondary rounded-top">
-							<h4 class="text-white">To do (<span id="to-do-tasks-count">5</span>)</h4>
+							<h4 class="text-white">To do (<span id="to-do-tasks-count">0</span>)</h4>
 
 						</div>
 						<div class="" id="to-do-tasks">
 							<!-- TO DO TASKS HERE -->
-							<button class="hc p-2 d-flex text-start w-100 border" >
+							<!-- <button class="hc p-2 d-flex text-start w-100 border" >
 								<div class="col-md-1">
 									<i class=" bi bi-question-circle"></i>
 								</div>
@@ -73,8 +75,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Feature</span>
 									</div>
 								</div>
-							</button>
-							<button class="hc p-2 d-flex text-start w-100 border" >
+							</button> -->
+							<!-- <button class="hc p-2 d-flex text-start w-100 border" >
 								<div class="col-md-1">
 									<i class="bi bi-question-circle"></i> 
 								</div>
@@ -93,8 +95,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Feature</span>
 									</div>
 								</div>
-							</button>
-							<button class="hc p-2 d-flex text-start w-100 border" >
+							</button> -->
+							<!-- <button class="hc p-2 d-flex text-start w-100 border" >
 								<div class="col-md-1">
 									<i class="bi bi-question-circle"></i> 
 								</div>
@@ -109,8 +111,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Feature</span>
 									</div>
 								</div>
-							</button>
-							<button class="hc p-2 d-flex text-start w-100 border">
+							</button> -->
+							<!-- <button class="hc p-2 d-flex text-start w-100 border">
 								<div class="col-md-1">
 									<i class="bi bi-question-circle"></i> 
 								</div>
@@ -125,8 +127,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Feature</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="bi bi-question-circle"></i> 
 								</div>
@@ -141,19 +143,19 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Feature</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class="mb-5" style="height: 100%;">
 						<div class="p-2 border bg-secondary rounded-top">
-							<h4 class="text-white">In Progress (<span id="in-progress-tasks-count">4</span>)</h4>
+							<h4 class="text-white">In Progress (<span id="in-progress-tasks-count">0</span>)</h4>
 
 						</div>
 						<div class="" id="in-progress-tasks">
 							<!-- IN PROGRESS TASKS HERE -->
-							<button class="hc p-2 d-flex text-start w-100 border">
+							<!-- <button class="hc p-2 d-flex text-start w-100 border">
 								<div class="col-md-1">
 									<i class="spinner-border spinner-border-sm"></i> 
 								</div>
@@ -168,8 +170,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="spinner-border spinner-border-sm"></i> 
 								</div>
@@ -184,8 +186,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="spinner-border spinner-border-sm"></i> 
 								</div>
@@ -200,8 +202,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="spinner-border spinner-border-sm"></i> 
 								</div>
@@ -216,19 +218,19 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
+							</button> -->
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class=""style="height: 100%;">
 						<div class="p-2 border bg-secondary rounded-top">
-							<h4 class="text-white ">Done (<span id="done-tasks-count">4</span>)</h4>
+							<h4 class="text-white ">Done (<span id="done-tasks-count">0</span>)</h4>
 
 						</div>
 						<div class=" " id="done-tasks">
 							<!-- DONE TASKS HERE -->
-							<button class="p-2 d-flex text-start w-100 border hc">
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="bi bi-check-circle"></i> 
 								</div>
@@ -243,8 +245,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="bi bi-check-circle"></i> 
 								</div>
@@ -259,8 +261,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button class="p-2 d-flex text-start w-100 border hc">
+							</button> -->
+							<!-- <button class="p-2 d-flex text-start w-100 border hc">
 								<div class="col-md-1">
 									<i class="bi bi-check-circle"></i> 
 								</div>
@@ -275,8 +277,8 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
-							<button  class="p-2 d-flex text-start w-100 border hc" >
+							</button> -->
+							<!-- <button  class="p-2 d-flex text-start w-100 border hc" >
 								<div class="col-md-1">
 									<i class="bi bi-check-circle"></i> 
 								</div>
@@ -291,7 +293,7 @@
 										<span class="btn btn-secondary rounded-pill p-0 col-md-2">Bug</span>
 									</div>
 								</div>
-							</button>
+							</button>  -->
 						</div>
 					</div>
 				</div>
@@ -309,7 +311,7 @@
 	<!-- TASK MODAL -->
 	<!-- <div class="modal fade" id="modal-task"> -->
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog jus">
+			<div class="modal-dialog jus form">
 			  <div class="modal-content"  style="background-color: #CAEBF2;">
 				<div class="modal-header"   style="background-color: #6C757D;">
 				  <h1 class="modal-title fs-4 text-white offset-5 " id="exampleModalLabel">Add task</h1>
@@ -317,12 +319,12 @@
 				</div>
 				<div class="modal-body">
 
-					<form>
+					<form id="formtasks" name="addingForm">
 						<br>
 						<!-- title -->
 					<div>
 						<label class="form-label" for="title">Title</label>
-						<input type="text" class="form-control">
+						<input type="text" class="form-control" id="title">
 					</div>
 
 
@@ -335,10 +337,10 @@
 						
 						
 					<div class="m-2">
-						<input class="form-check-input " type="radio" value="feature" id="feature" name="type">
+						<input class="form-check-input " type="radio" value="Feature" id="Feature" name="type" checked>
 						<label for="feature">Feature</label>
 					
-						<input class="form-check-input" type="radio" value="bug" id="bug" name="type">
+						<input class="form-check-input" type="radio" value="Bug" id="Bug" name="type"  >
 						<label for="bug">Bug</label>
 						
 					</div>
@@ -348,39 +350,37 @@
 						<!-- prioritys -->
 						<div class="form-group">
 							<label for="Priorityselect">Priority</label>
-							<select class="form-select" id="Priorityselect">
+							<select name="priority" class="form-select" id="priority">
 								<option selected disabled value="">Pleas Select</option>
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
+							  <option>Low</option>
+							  <option>Medium </option>
+							  <option>High</option>
+						
 							</select>
 						  </div>
 						  <br>
 						  <!-- Status -->
 						  <div class="form-group">
-							<label for="Statusselect">Priority</label>
-							<select class="form-select" id="Statusselect">
+							<label for="Statusselect">status</label>
+							<select name="status" class="form-select" id="status">
 								<option selected disabled value="">Pleas Select</option>
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
+							  <option>To Do</option>
+							  <option>In Progress</option>
+							  <option>Done</option>
+
 							</select>
 						  </div>  
 
 						  <br>
 						  <!-- date -->
 						  <label for="date">Date</label>
-						  <input type="date" class="form-control">
+						  <input name="date" type="date" id="date" class="form-control">
 						<br>
 						  <!-- textdescription -->
 
 						  <div class="form-group">
 							<label for="descriptionlb">Description</label>
-							<textarea class="form-control" id="descriptionlb" rows="3"></textarea>
+							<textarea name="description" class="form-control" id="description" rows="3"></textarea>
 						  </div>
 						
 					  </form>
@@ -389,19 +389,29 @@
 
 			</div>
 				<div class="modal-footer">
-				  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-				  <button type="button" class="btn btn-success">Save</button>
+				  <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+				  <button id="btn-edit" type="submit" class="btn btn-success" onclick="addTask()" data-bs-dismiss="modal">Save</button>
+				  <button onclick="Update()" style="display:none" id="update" type="submit" class="btn btn-warning"  data-bs-dismiss="modal">Update</button>
 				</div>
 			  </div>
 			</div>
 		  </div>
 		  
-		<!-- Modal content goes here -->
-	<!-- </div> -->
+		<!-- Another Modal -->
+		
+	<!-- Large modal -->
+	<!--Loading   -->
+
 	
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="assets/js/vendor.min.js"></script>
 	<script src="assets/js/app.min.js"></script>
+	<script src="assets/js/data.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 	<!-- ================== END core-js ================== -->
+
+	
 </body>
 </html>

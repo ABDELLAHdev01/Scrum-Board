@@ -1,3 +1,5 @@
+
+
 .pace {
     display: none;
 }
@@ -38,4 +40,33 @@
 
         width: 79%;
         height: 25px;
+}
+
+
+#EditCont{
+display: none;
+}
+.taskt:hover #EditCont{
+    display: block;
+}
+.ContEdit{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #CAEBF2;
+    z-index: 999;
+}
+.ContEdit:hover{
+    
+}
+.ContEdit i{
+
+}
+
+.taskt{
+    position: relative;
 }
