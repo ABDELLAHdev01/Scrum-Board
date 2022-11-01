@@ -60,13 +60,9 @@ display: none;
     background-color: #CAEBF2;
     z-index: 999;
 }
-.ContEdit:hover{
-    
-}
-.ContEdit i{
 
-}
 
 .taskt{
     position: relative;
 }
+
