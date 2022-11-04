@@ -11,12 +11,41 @@ if(isset($_GET['updateid'])){
     $result = mysqli_query($con,$sql);
     $row = $result->fetch_assoc() ?>
             
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8" />
+	<title>YouCode | Scrum Board</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!-- ICON -->
+	<link rel="icon" href="/assets/img/ic.png" type="image/icon type">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="assets/css/default/app.min.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- ================== END core-css ================== -->
+</head>
+<body>
+	
+	<!-- BEGIN #app -->
+	<div id="app" class="app-without-sidebar">
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content main-style">
+			
+				
             <div class="modal-dialog jus form">
-            <div class="modal-content"  style="background-color: #CAEBF2;">
-              <div class="modal-header"   style="background-color: #6C757D;">
+            <div class="modal-content bluefade" >
+				<div class="modal-header blackfade"  >
                 <h1 class="modal-title fs-4 text-white offset-5 editText" id="exampleModalLabel">Add task</h1>
                 
-              <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+             <a href="index.php"> <button type="button"  class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button> </a>
               </div>
               <div class="modal-body">
 
@@ -77,46 +106,22 @@ if(isset($_GET['updateid'])){
                     
                   </div>
               <div class="modal-footer">
-              <a href="index.php"><button  class="btn btn-danger" data-bs-dismiss="modal" >Close</button></a>
-                <button  id="update"  type="submit"  name="update" class="btn btn-warning"  data-bs-dismiss="modal"  name="update" >update</button>
+             
+                <button  id="update"  type="submit"  name="update" class="btn btn-dark"  data-bs-dismiss="modal"  name="update" >update</button>
               
           </div>
           </form>
             </div>
           </div>
-        </div>';
+        </div>
+        <div class="bg"></div>
+
+<div class="star-field">
+<div class="layer"></div>
+<div class="layer"></div>
+<div class="layer"></div>';
         <?php
     }
     
  ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-	<title>YouCode | Scrum Board</title>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta content="" name="description" />
-	<meta content="" name="author" />
-	<!-- ICON -->
-	<link rel="icon" href="/assets/img/ic.png" type="image/icon type">
-	<!-- CSS only -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-	<!-- ================== BEGIN core-css ================== -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-	<link href="assets/css/vendor.min.css" rel="stylesheet" />
-	<link href="assets/css/default/app.min.css" rel="stylesheet" />
-	<link href="assets/css/style.css" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	<!-- ================== END core-css ================== -->
-
-</head>
-<body>
-<?php
-
-
-?>
-		  
-</body>
-</html>

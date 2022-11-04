@@ -16,7 +16,8 @@ include('scripts.php');
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<!-- ICON -->
-	<link rel="icon" href="/assets/img/ic.png" type="image/icon type">
+	<link rel="icon" href="assets/img/ic.ico" type="image/x-icon">
+
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -29,14 +30,20 @@ include('scripts.php');
 	<!-- ================== END core-css ================== -->
 </head>
 <body>
-	<div id="preloader"></div>
+	<!-- Load -->
+
+	
 	<!-- BEGIN #app -->
 	<div id="app" class="app-without-sidebar">
 		<!-- BEGIN #content -->
 		<div id="content" class="app-content main-style">
 			<div class="d-flex justify-content-between">
 				<div class="row breadcrumb">
-					<ol class="breadcrumb">
+				<form action="" method="POST">
+					<button name="deletealls" class="btn btn-primary rounded-pill">Delete All</button>
+					</form>
+					<ol class="breadcrumb d-none">
+					
 						<li class="breadcrumb-item"><a href="javascript:;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
 							<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
 						  </svg> </a></li>
@@ -44,24 +51,32 @@ include('scripts.php');
 							<path d="M0 0h16v16H0V0zm1 1v6.5h6.5V1H1zm7.5 0v6.5H15V1H8.5zM15 8.5H8.5V15H15V8.5zM7.5 15V8.5H1V15h6.5z"/>
 						  </svg></li>
 					</ol>
+					
 					<!-- BEGIN page-header -->
 					
 					<!-- END page-header -->
 				</div>
 				
 				<div class="" >
-					<span id="deleteall"></span>
-					<button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="show()" >Add Task<i class="bi bi-plus-lg"></i></a></button>
-				</div>
+	
+				
+				<button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="show()" >Add Task<i class="bi bi-plus-lg"></i></a></button>
+				<br>
+				
+				<br>
 				
 			</div>
-			<div class="text-center text-lg-start">
-			<h1 class="page-header fw-bold " id="Sb">
-				Scrum Board 
+
+				
+			</div>
+			<div class="text-center text-lg-start ">
+			<h1 class="page-header fw-bold text-primary" id="Sb">
+			<span class="text-white">	Scrum</span> Board 
 			</h1>
+			<!-- session message -->
 			<?php if (isset($_SESSION['message'])): ?>
 				<div class="alert alert-green alert-dismissible fade show">
-				<strong>Success!</strong>
+				<strong></strong>
 					<?php 
 						echo $_SESSION['message']; 
 						unset($_SESSION['message']);
@@ -69,11 +84,12 @@ include('scripts.php');
 					<button type="button" class="btn-close" data-bs-dismiss="alert"></span>
 				</div>
 			<?php endif ?>
+			
 		</div>
 			<div class="row justify-content-around	" id="testing">
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class="mb-5" style="height: 100%;">
-						<div class="p-2 border bg-secondary rounded-top">
+						<div class="p-2 border-0  rounded-top fadebg">
 							<h4 class="text-white">To do (<span id="to-do-tasks-count">0</span>)</h4>
 
 						</div>
@@ -87,7 +103,7 @@ include('scripts.php');
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class="mb-5" style="height: 100%;">
-						<div class="p-2 border bg-secondary rounded-top">
+						<div class="p-2 border-0 fadebg rounded-top">
 							<h4 class="text-white">In Progress (<span id="in-progress-tasks-count">0</span>)</h4>
 
 						</div>
@@ -101,7 +117,7 @@ include('scripts.php');
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-4" style="width: 355px;">
 					<div class=""style="height: 100%;">
-						<div class="p-2 border bg-secondary rounded-top">
+						<div class="p-2 border-0 fadebg rounded-top">
 							<h4 class="text-white ">Done (<span id="done-tasks-count">0</span>)</h4>
 
 						</div>
@@ -129,11 +145,11 @@ include('scripts.php');
 		
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog jus form">
-			  <div class="modal-content"  style="background-color: #CAEBF2;">
-				<div class="modal-header"   style="background-color: #6C757D;">
+			  <div class="modal-content bluefade" >
+				<div class="modal-header blackfade"  >
 				  <h1 class="modal-title fs-4 text-white offset-5 editText" id="exampleModalLabel">Add task</h1>
 				  
-				<button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
 
@@ -142,7 +158,8 @@ include('scripts.php');
 						<!-- title -->
 						<div>
 							<label class="form-label" for="title">Title</label>
-							<input name="title" type="text" class="form-control" id="title">
+							<input name="title" type="text" class="form-control" id="title" required>
+							<span> <?php if(isset($title_erorr)) echo  $msg ; ?> </span>
 						</div>
 							<!-- Type -->
 						<br>
@@ -150,10 +167,10 @@ include('scripts.php');
 						<label class="form-label" for="type" name="type">Type</label>
 							</div>										
 							<div class="m-2">
-							<input class="form-check-input " type="radio" value="1" id="Feature" name="type" checked>
+							<input class="form-check-input " type="radio" value="1" id="Feature" name="type" checked >
 						<label for="feature">Feature</label>
 					
-						<input class="form-check-input" type="radio" value="2" id="Bug" name="type"  >
+						<input class="form-check-input" type="radio" value="2" id="Bug" name="type" >
 						<label for="bug">Bug</label>
 						
 						</div>
@@ -161,8 +178,8 @@ include('scripts.php');
 						<!-- prioritys -->
 							<div class="form-group">
 							<label for="Priorityselect">Priority</label>
-							<select name="priority" class="form-select" id="priority">
-								<option selected disabled value="">Pleas Select</option>
+							<select name="priority" class="form-select" id="priority" required>
+								<option selected disabled value="">Pleas Select</option >
 							  <option value="3">Low</option>
 							  <option value="2">Medium </option>
 							  <option value="1">High</option>						
@@ -172,7 +189,7 @@ include('scripts.php');
 						  <!-- Status -->
 						  <div class="form-group">
 							<label for="Statusselect">status</label>
-							<select name="status" class="form-select" id="status">
+							<select name="status" class="form-select" id="status"  required>
 								<option selected disabled value="">Pleas Select</option>
 							  <option value="1">To Do</option>
 							  <option value="2">In Progress</option>
@@ -182,7 +199,7 @@ include('scripts.php');
 						  <br>
 						  <!-- date -->
 						  <label for="date">Date</label>
-						  <input name="date" type="date" id="date" class="form-control">
+						  <input name="date" type="date" id="date" class="form-control" required>
 							<br>
 						  <!-- textdescription -->
 
@@ -193,15 +210,15 @@ include('scripts.php');
 					  
 					</div>
 				<div class="modal-footer">
-				  <button  class="btn btn-danger" data-bs-dismiss="modal" >Close</button>
-				  <button  id="btn-edit" type="submit" class="btn btn-success" name="save" data-bs-dismiss="modal">Save</button>
-				  <button style="display:none" id="update"  type="submit"  name="update" class="btn btn-warning"  data-bs-dismiss="modal"  >update</button>
+				  <button  class="btn btn-dark" data-bs-dismiss="modal" Type="button" >Close</button>
+				  <button  id="btn-edit" type="submit" class="btn btn-primary" name="save" >Save</button>
 				
 			</div>
 			</form>
 			  </div>
 			</div>
 		  </div>
+
 		  
 	<!-- ================== BEGIN core-js ================== -->
 	<script src="assets/js/app.min.js"></script>
@@ -209,6 +226,10 @@ include('scripts.php');
     <script src="main.js" ></script>
 	<!-- ================== END core-js ================== -->
 
-	
+<div class="bg"></div>
+<div class="star-field">
+<div class="layer"></div>
+<div class="layer"></div>
+<div class="layer"></div>
 </body>
 </html>
